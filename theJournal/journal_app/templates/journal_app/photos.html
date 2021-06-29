@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Andrii Sydor</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'main_page' %}">Main</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'photos' %}">Photos</a>
+        <a href="/admin">Admin</a>
+    </nav>
+    <h1>Gallery</h1>
+    <p>
+        here you can see some of my photos that<br>
+        I feel I have to share with the whole world.<br>
+    </p>
+
+    {% for element in elements %}
+    <p><img src="{{ element.image.path }}"></p>
+    <p>{{ element.title }}</p>
+    <p>{{ element.date }}</p>
+    {% endfor %}
+</body>
+</html>

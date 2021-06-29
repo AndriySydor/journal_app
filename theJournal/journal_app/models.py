@@ -8,3 +8,12 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ImagePost(models.Model):
+    image = models.ImageField('Image')
+    title = models.CharField('Title', max_length=50)
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
