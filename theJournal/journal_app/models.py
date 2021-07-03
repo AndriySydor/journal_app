@@ -11,7 +11,7 @@ class Article(models.Model):
 
 
 class ImagePost(models.Model):
-    image = models.ImageField('Image')
+    image = models.ImageField(default='img/default.png', upload_to='img', blank=True, null=True)
     title = models.CharField('Title', max_length=50)
     date = models.DateTimeField(auto_now_add=True)
 

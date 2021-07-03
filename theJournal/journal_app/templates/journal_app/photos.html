@@ -19,11 +19,15 @@
         here you can see some of my photos that<br>
         I feel I have to share with the whole world.<br>
     </p>
+    <p>----------------------------------------------------------</p>
 
     {% for element in elements %}
-    <p><img src="{{ element.image.path }}"></p>
-    <p>{{ element.title }}</p>
+    <p>
+        <img class="card-image mr-3" src="{{ element.image.url }}" width="200">
+    </p>
+    <h3>{{ element.title }}</h3>
     <p>{{ element.date }}</p>
+    <p>----------------------------------------------------------</p>
     {% endfor %}
 </body>
 </html>
