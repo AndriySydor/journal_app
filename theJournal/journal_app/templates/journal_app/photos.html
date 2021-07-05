@@ -21,13 +21,14 @@
     </p>
     <p>----------------------------------------------------------</p>
 
+
     {% for element in elements %}
-    <p>
-        <img class="card-image mr-3" src="{{ element.image.url }}" width="200">
-    </p>
+    <img class="card-image mr-3" src="{{ element.image.url }}" width="200">
     <h3>{{ element.title }}</h3>
     <p>{{ element.date }}</p>
     <p>----------------------------------------------------------</p>
     {% endfor %}
+
+
 </body>
 </html>
